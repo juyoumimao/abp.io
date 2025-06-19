@@ -1,0 +1,10 @@
+{
+  "culture": "en",
+  "texts": {
+    "AppName": "BookStore",
+    "Menu:Home": "Home",
+    "Welcome": "Welcome",
+    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
+    "BookStore:00001": "重名了:{name}" //每当引发时，最终用户都会在 UI 上看到一条不错的错误消息
+  }
+}
