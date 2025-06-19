@@ -13,7 +13,7 @@ namespace BookStore
     }
     public class PageOutputDto<TData>
     {
-        public long TotalCount { get; set; }
+        public int TotalCount { get; set; }
         public int PageCount { get; set; }
         public List<TData> Data { get; set; }
 

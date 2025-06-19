@@ -133,7 +133,7 @@ namespace BookStore.Books
             var booklist = await repository.GetQueryableAsync();
             var totalCount = booklist.Count();
             var totalPage=(int)Math.Ceiling((double)totalCount/ booksearckDto.PageSize);
-            var pagesbookx=booklist.OrderBy(x=>x.Name).Skip((booksearckDto.PageIndex- 1)*booksearckDto.PageSize).Take(totalCount).ToList();
+            var pagesbookx=booklist.OrderBy(x=>x.Id).Skip((booksearckDto.PageIndex- 1)*booksearckDto.PageSize).Take(totalCount).ToList();
             return ResultDto<PageOutputDto<BookDto>>.Success(ResultCode.Ok, new PageOutputDto<BookDto>
             {
                 Data=ObjectMapper.Map<List<Book>,List<BookDto>>(pagesbookx),
